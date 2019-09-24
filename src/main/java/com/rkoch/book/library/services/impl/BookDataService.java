@@ -90,6 +90,5 @@ public class BookDataService
             throw new EntityNotFoundException("Ksiażka o podanym ISBN nie została znaleziona.");
         }
         return data;
-    }
-    
+    }  
 }

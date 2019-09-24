@@ -37,7 +37,5 @@ public class BookStats {
     @Override
     public String toString() {
         return "BookStats{" + "total=" + total + ", available=" + available + ", lent=" + lent + '}';
-    }   
-    
-    
+    }    
 }

@@ -21,6 +21,5 @@ public class BookDataRepository
     @Override
     public BookData save(BookData obj) {
         return this.dataSource.put(obj.getId(), obj);
-    }
-    
+    }   
 }

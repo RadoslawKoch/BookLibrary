@@ -3,7 +3,6 @@ package com.rkoch.book.library.repositories.impl;
 import com.rkoch.book.library.entities.Book;
 import java.util.concurrent.atomic.AtomicLong;
 
-
 /**
  *
  * @author rkoch

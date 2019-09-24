@@ -99,7 +99,5 @@ public class BookOrder implements Entity<Long>{
             return false;
         }
         return true;
-    }
-    
-    
+    } 
 }

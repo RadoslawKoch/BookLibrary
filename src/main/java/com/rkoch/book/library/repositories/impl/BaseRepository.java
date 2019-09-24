@@ -3,7 +3,6 @@ package com.rkoch.book.library.repositories.impl;
 import com.rkoch.book.library.repositories.definition.RepositoryDefinition;
 import com.rkoch.book.library.entities.definition.Entity;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -60,8 +59,5 @@ public abstract class BaseRepository<T extends Entity<Long>>
     @Override
     public Integer count(){
         return this.dataSource.size();
-    }
-    
-    
-    
+    }  
 }

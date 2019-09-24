@@ -86,8 +86,6 @@ public class Customer implements Entity<Long>{
         return true;
     }
 
-    
-
     @Override
     public String toString() {
         return "Customer{" + "id=" + id + ", fname=" + fname + ", lname=" + lname + ", email=" + email + '}';

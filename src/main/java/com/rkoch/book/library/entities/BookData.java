@@ -110,11 +110,9 @@ public class BookData
         }
         return true;
     }
-    
-    
 
     @Override
     public String toString() {
-        return "BookData{" + "id=" + id + ", author=" + author + ", title=" + title + ", year=" + year + "stats="+getStats()+ '}';
+        return "BookData{" + "id=" + id + ", author=" + author + ", title=" + title + ", year=" + year + ", stats="+getStats()+ '}';
     }   
 }

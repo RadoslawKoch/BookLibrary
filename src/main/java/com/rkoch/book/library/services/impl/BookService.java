@@ -68,8 +68,5 @@ public class BookService
         }
         book.getData().getBooks().remove(book);
         return this.books.delete(id);
-    }
-    
-    
-    
+    } 
 }

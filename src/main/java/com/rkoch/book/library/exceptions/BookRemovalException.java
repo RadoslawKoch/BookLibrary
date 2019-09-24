@@ -8,7 +8,5 @@ public class BookRemovalException extends Exception{
 
     public BookRemovalException(String message) {
         super(message);
-    }
-    
-    
+    }  
 }
