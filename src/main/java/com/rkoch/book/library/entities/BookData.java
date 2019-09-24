@@ -69,13 +69,14 @@ public class BookData
     }
 
     public List<Book> getBooks() {
-        return books;
+        return this.books;
     }
 
     public BookStats getStats(){
         BookStats stats = new BookStats();
         long total = this.books.size();
-        long available = this.books.stream().filter(x->x.isAvaliable()).count();
+        long available = this.books.stream()
+                .distinct().filter(x->x.isAvaliable()).count();
         stats.setAvailable(available);
         stats.setLent(total-available);
         stats.setTotal(total);

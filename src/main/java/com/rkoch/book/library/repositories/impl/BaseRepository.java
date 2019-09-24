@@ -46,7 +46,6 @@ public abstract class BaseRepository<T extends Entity<Long>>
         Stream<T> stream = this.dataSource.values().stream();
         for(var x : preds){
             stream = stream.filter(x);
-            System.out.println(x);
         }
         return stream.collect(Collectors.toList());
     }

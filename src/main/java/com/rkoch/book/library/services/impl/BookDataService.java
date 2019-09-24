@@ -64,12 +64,12 @@ public class BookDataService
         if(criteria.getAuthor()!=null){
             criterias.add(x->
                     x.getAuthor().toLowerCase()
-                    .equals(criteria.getAuthor().toLowerCase()));
+                    .contains(criteria.getAuthor().toLowerCase()));
         }
         if(criteria.getTitle()!=null){
             criterias.add(x->
                     x.getTitle().toLowerCase()
-                    .equals(criteria.getTitle().toLowerCase()));
+                    .contains(criteria.getTitle().toLowerCase()));
         }
         if(criteria.getYear()!=null){
             criterias.add(x->

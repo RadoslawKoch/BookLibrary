@@ -52,7 +52,6 @@ public class OrderBookService
     public BookOrder orderBook(long id, Customer customer) throws BookNotAvailableException{
         this.addIfAbsent(customer);
         Book book = repo.get(id);
-        System.out.println(book);
         if(book==null || !book.isAvaliable()){
             throw new BookNotAvailableException("Książka o wybranym numerze ISBN nie jest dostępna.");
         }

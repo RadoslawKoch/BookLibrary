@@ -26,13 +26,13 @@ public class TestData {
     public static final String CUSTOMER_EMAIL = "metslesgaz@laposte.net";
     
     public static final Book LENT_BOOK = MockHelper.getBook(MockHelper
-                .getBookData(AUTHOR_NAME,BOOK_TITLE,LENT_ISBN),CoverType.HARD);
+                .getBookData(BOOK_TITLE,AUTHOR_NAME,LENT_ISBN),CoverType.HARD);
                 
     public static final Book GET_BOOK = MockHelper.getBook(MockHelper
-                .getBookData(AUTHOR_NAME,BOOK_TITLE,EXISTING_BOOK_ISBN),CoverType.HARD);
+                .getBookData(BOOK_TITLE,AUTHOR_NAME,EXISTING_BOOK_ISBN),CoverType.HARD);
     
     public static final Book NEW_BOOK = MockHelper.getBook(MockHelper
-                .getBookData(AUTHOR_NAME,BOOK_TITLE,EXISTING_BOOK_ISBN),CoverType.SOFT);
+                .getBookData(BOOK_TITLE,AUTHOR_NAME,EXISTING_BOOK_ISBN),CoverType.SOFT);
     
     public static final List<Book> GET_ALL_BOOKS = List.of(GET_BOOK, LENT_BOOK);
     

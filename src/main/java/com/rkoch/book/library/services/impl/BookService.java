@@ -49,7 +49,7 @@ public class BookService
     @Override
     public Book add(Book book){
         BookData data = this.bookRepo.get(book.getData().getId());
-        if(data!=null){
+        if(data==null){
             data = this.bookRepo.save(book.getData());
         }       
         book = this.books.save(book);    
