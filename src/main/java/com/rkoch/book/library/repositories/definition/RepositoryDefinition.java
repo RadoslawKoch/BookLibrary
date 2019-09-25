@@ -6,8 +6,8 @@ import java.util.function.Predicate;
 /**
  *
  * @author rkoch
- * @param <T>
- * @param <I>
+ * @param <T> Main Entity Datatype
+ * @param <I> Entity Id
  */
 public interface RepositoryDefinition<T,I> {
         

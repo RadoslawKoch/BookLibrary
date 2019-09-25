@@ -2,8 +2,7 @@ package com.rkoch.book.library.services;
 
 import com.rkoch.book.library.entities.BookOrder;
 import com.rkoch.book.library.exceptions.BookNotAvailableException;
-import com.rkoch.book.library.services.definitions.OrderBookServiceDefinition;
-import com.rkoch.book.library.services.impl.OrderBookService;
+import com.rkoch.book.library.services.impl.BookOrderService;
 import com.rkoch.book.library.services.mocks.MockBookOrderRepository;
 import com.rkoch.book.library.services.mocks.MockBookRepository;
 import com.rkoch.book.library.services.mocks.MockCustomerRepository;
@@ -12,6 +11,7 @@ import org.junit.After;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
+import com.rkoch.book.library.services.definitions.BookOrderServiceDefinition;
 
 
 /**
@@ -20,11 +20,11 @@ import org.junit.Test;
  */
 public class BookOrderServiceUnitTest {
     
-    private OrderBookServiceDefinition service;
+    private BookOrderServiceDefinition service;
     
     @Before
     public void setup(){
-        this.service = new OrderBookService(
+        this.service = new BookOrderService(
                 new MockBookRepository(),
                 new MockBookOrderRepository(),
                 new MockCustomerRepository());

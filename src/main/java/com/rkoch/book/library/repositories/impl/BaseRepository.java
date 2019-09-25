@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 /**
  *
  * @author rkoch
- * @param <T>
+ * @param <T> Repository Entity Type
  */
 public abstract class BaseRepository<T extends Entity<Long>> 
         implements RepositoryDefinition<T,Long>{

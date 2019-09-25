@@ -7,23 +7,22 @@ import com.rkoch.book.library.entities.BookOrder;
 import com.rkoch.book.library.entities.Customer;
 import com.rkoch.book.library.exceptions.BookNotAvailableException;
 import com.rkoch.book.library.repositories.definition.RepositoryDefinition;
-import com.rkoch.book.library.services.definitions.OrderBookServiceDefinition;
+import com.rkoch.book.library.services.definitions.BookOrderServiceDefinition;
 
 /**
  *
  * @author rkoch
  */
-public class OrderBookService 
-    implements OrderBookServiceDefinition {
+public class BookOrderService 
+    implements BookOrderServiceDefinition {
     
-    //@Autowired
     private final RepositoryDefinition<Book,Long> repo;
     
     private final RepositoryDefinition<BookOrder,Long> orderRepo;
     
     private final RepositoryDefinition<Customer,Long> customerRepo;
     
-    public OrderBookService(RepositoryDefinition<Book,Long> repo, 
+    public BookOrderService(RepositoryDefinition<Book,Long> repo, 
                             RepositoryDefinition<BookOrder,Long> orderRepo,
                             RepositoryDefinition<Customer,Long> customerRepo){
         this.repo = repo;
@@ -53,7 +52,7 @@ public class OrderBookService
         this.addIfAbsent(customer);
         Book book = repo.get(id);
         if(book==null || !book.isAvaliable()){
-            throw new BookNotAvailableException("Książka o wybranym numerze ISBN nie jest dostępna.");
+            throw new BookNotAvailableException("Książka o wybranym numerze ID nie jest dostępna.");
         }
         book.setAvaliable(false);
         BookOrder order = new BookOrder(customer,book);

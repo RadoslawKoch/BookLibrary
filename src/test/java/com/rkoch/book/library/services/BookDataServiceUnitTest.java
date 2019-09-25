@@ -1,6 +1,5 @@
 package com.rkoch.book.library.services;
 
-import com.rkoch.book.library.entities.Book;
 import com.rkoch.book.library.services.impl.BookDataService;
 import com.rkoch.book.library.entities.BookData;
 import com.rkoch.book.library.entities.search.BookDataSearchCriteria;
@@ -63,7 +62,7 @@ public class BookDataServiceUnitTest {
     public void searchBookByAuthorAndTitleReturnsEmptyList(){
         BookDataSearchCriteria criteria = new BookDataSearchCriteria();
         criteria.setAuthor(TestData.AUTHOR_NAME);
-        criteria.setTitle("");
+        criteria.setTitle("al");
         List<BookData> books = this.bookService.search(criteria);
         assertTrue(books.isEmpty());
     }

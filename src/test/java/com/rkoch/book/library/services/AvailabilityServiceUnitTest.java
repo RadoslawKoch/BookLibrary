@@ -22,12 +22,12 @@ public class AvailabilityServiceUnitTest {
 
     @Test
     public void testBookAvailabilityForAvailableBook(){
-        assertTrue(this.service.isBookAvaliable(TestData.EXISTING_BOOK_ISBN));
+        assertTrue(this.service.isBookAvailable(TestData.EXISTING_BOOK_ISBN));
     }
     
     @Test
     public void testBookAvailabilityForNotAvailableBook(){
-        assertFalse(this.service.isBookAvaliable(TestData.INEXISTING_BOOK_ISBN));
+        assertFalse(this.service.isBookAvailable(TestData.INEXISTING_BOOK_ISBN));
     }
     
 }

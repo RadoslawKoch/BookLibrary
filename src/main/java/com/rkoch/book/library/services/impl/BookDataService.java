@@ -51,6 +51,7 @@ public class BookDataService
             throw new BookRemovalException("Wszystkie egzemplarze książki o podanym ISBN nie zostały zwrócone.");
         }
         books.stream().forEach(x->{
+            x.getData().getBooks().clear();
             this.bookRepo.delete(x.getId());
         });
         List<BookOrder> orders = this.orderRepo.search(x->Objects.equals(isbn, x.getBook().getData().getId()));

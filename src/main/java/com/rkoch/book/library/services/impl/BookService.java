@@ -16,7 +16,6 @@ import java.util.List;
 public class BookService
     implements BookServiceDefinition{
     
-    //@Autowired
     private final RepositoryDefinition<BookData,Long> bookRepo;
     
     private final RepositoryDefinition<Book,Long> books;
@@ -51,7 +50,9 @@ public class BookService
         BookData data = this.bookRepo.get(book.getData().getId());
         if(data==null){
             data = this.bookRepo.save(book.getData());
-        }       
+        } else{
+            data = book.getData();
+        }      
         book = this.books.save(book);    
         data.getBooks().add(book);
         return book;
@@ -66,6 +67,7 @@ public class BookService
         if(!book.isAvaliable()){
             throw new BookRemovalException("Nie można usunąć wybanej książki. Podana pozycja jest wypożyczona.");
         }
+        book.getOrders().clear();
         book.getData().getBooks().remove(book);
         return this.books.delete(id);
     } 

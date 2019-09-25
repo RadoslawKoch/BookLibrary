@@ -6,5 +6,5 @@ package com.rkoch.book.library.services.definitions;
  */
 public interface AvailabilityServiceDefinition {
  
-    boolean isBookAvaliable(long isbn);
+    boolean isBookAvailable(long isbn);
 }

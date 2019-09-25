@@ -75,8 +75,9 @@ public class BookData
     public BookStats getStats(){
         BookStats stats = new BookStats();
         long total = this.books.size();
-        long available = this.books.stream()
-                .distinct().filter(x->x.isAvaliable()).count();
+        long available = 
+                this.books.stream()
+                .filter(x->x.isAvaliable()).count();
         stats.setAvailable(available);
         stats.setLent(total-available);
         stats.setTotal(total);
@@ -106,14 +107,13 @@ public class BookData
         if (this.id != other.id) {
             return false;
         }
-        if (!Objects.equals(this.year, other.year)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.year, other.year);
     }
 
     @Override
     public String toString() {
-        return "BookData{" + "id=" + id + ", author=" + author + ", title=" + title + ", year=" + year + ", stats="+getStats()+ '}';
+        return "BookData{" + "id=" + id + ", author=" 
+                + author + ", title=" + title + ", year=" + year 
+                + ", stats="+getStats()+ '}';
     }   
 }

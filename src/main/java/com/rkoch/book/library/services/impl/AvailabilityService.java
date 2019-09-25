@@ -20,7 +20,7 @@ public class AvailabilityService
     }
     
     @Override
-    public boolean isBookAvaliable(long isbn){
+    public boolean isBookAvailable(long isbn){
         List<Book> books = 
                 this.repo.search(x->x.getData().getId()==isbn && x.isAvaliable());
         return !books.isEmpty();

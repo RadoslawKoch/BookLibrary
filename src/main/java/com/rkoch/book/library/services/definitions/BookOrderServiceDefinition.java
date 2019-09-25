@@ -8,7 +8,7 @@ import com.rkoch.book.library.exceptions.BookNotAvailableException;
  *
  * @author rkoch
  */
-public interface OrderBookServiceDefinition {
+public interface BookOrderServiceDefinition {
     
     BookOrder orderBookByIsbn(long isbn, Customer customer) 
             throws BookNotAvailableException;   

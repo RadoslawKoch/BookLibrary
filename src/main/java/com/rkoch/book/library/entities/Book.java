@@ -66,9 +66,10 @@ public class Book
     }
     
     public Customer getCustomer(){
-        if(this.avaliable)
-            return null;
-        return this.orders.get(this.orders.size()-1).getCustomer();
+        if(!this.avaliable && !this.orders.isEmpty()){
+            return this.orders.get(this.orders.size()-1).getCustomer();
+        }
+        return null;    
     }
 
     @Override
@@ -90,10 +91,7 @@ public class Book
             return false;
         }
         final Book other = (Book) obj;
-        if (this.id != other.id) {
-            return false;
-        }
-        return true;
+        return this.id == other.id;
     }
   
     @Override
