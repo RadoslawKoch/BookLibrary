@@ -1,38 +1,42 @@
+------------------------------------------------
 BOOK-LIBRARY APPLICATION
+------------------------------------------------
 
-There are two ways to build and run the application. Once is to used an IDE with maven build-in, the other is
+There are two ways to build and run the application. One is to use an IDE with maven build-in, the other is
 to use System Command prompt with maven installed and configured on your system.
-
-BUILD AND RUN TESTS:
+------------------------------------------------
+BUILD AND RUN TESTS
+------------------------------------------------
 
 All you need to see the test result and make the application ready to go is to use Maven command:
 
 mvn install
 
-Install target will compile our project and run all its tests.
-------------------------------------
+Install target will compile project and run all its tests.
+------------------------------------------------
 Expectation verification:
-
+------------------------------------------------
 If you want to verify if all requirements are meet, please run only the MainIntegrationTest file.
-To have all details please switch to Console view. Every requirement is tested and some of them is displayed
+To have all details please switch to Console view. Every requirement is tested and some of them is displayed.
 
 ------------------------------------------------
 Entities:
-
+------------------------------------------------
 There are 4 (simulated) entites in application:
 
-- Book - correspond to a real book (a concrete book) that we can lent at library
-- BookData - correspond to a book position/title (abstract book). Contains informations commun for many concrete books.
-- Customer - Library registered customer
+- Book - correspond to a real book (a concrete book) that we can lent at library.
+- BookData - correspond to a book position/title (abstract book). Contains informations common for many concrete books.
+- Customer - library registered customer.
 - BookOrder - alows to connect a concrete book with person and trace its history.
 
 -------------------------------------------------
 Repositories:
-
+-------------------------------------------------
 For simplicity reason and because of not using a real database, Repositories were made fake.
 They are all sigeltons (insteed of beans for simplicity/Spring DI module couldn't be used).
-Data is retrained on runtime in ConcurrencyHashMaps. The relationships between object are simulated at Service level
-----------------------------------------------------
+Data is retrained on runtime in ConcurrencyHashMaps. The relationships between object are simulated at Service level.
+-------------------------------------------------
 Services:
-
-Allows customers 
+-------------------------------------------------
+Allows customers to save and retrieve data related to book library. End-layer that can be exposed to controllers. 
+It ensures the data integrity and keep all dependencies as needed.
