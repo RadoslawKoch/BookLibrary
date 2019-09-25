@@ -1,0 +1,10 @@
+/build/*
+/dist/*
+/nbproject/*
+/test/*
+*.class
+/bin/
+*.project
+*.classpath
+.settings
+.mvn
